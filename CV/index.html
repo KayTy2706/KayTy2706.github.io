@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Nguyễn Trần Khang Thịnh</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #eef2f7;
+    padding: 20px;
+}
+
+.cv-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.left-column {
+    width: 100%;
+    max-width: 350px;
+    background: linear-gradient(180deg, #60a5fa, #93c5fd); /* gradient nhạt hơn */
+    color: white;
+    padding: 40px 30px;
+    flex-shrink: 0;
+}
+
+.right-column {
+    flex: 1;
+    background: #ffffff;
+    padding: 40px;
+}
+
+.avatar-wrapper {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(90deg, #93c5fd, #bfdbfe); /* gradient nhạt dịu */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.left-column h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 5px;
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e40af;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: -30px;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    border-radius: 2px;
+}
+
+.skill-bar-container {
+    background: rgba(255,255,255,0.3);
+    height: 6px;
+    border-radius: 3px;
+}
+
+.skill-level {
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    transition: width 0.5s ease;
+}
+
+.skill-item:hover .skill-level {
+    opacity: 0.9;
+}
+
+.item.border-l-4 {
+    border-left-color: #3b82f6;
+}
+
+@media screen and (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+    }
+    .left-column, .right-column {
+        width: 100%;
+        max-width: none;
+        padding: 30px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="cv-container">
+
+    <!-- Cột trái -->
+    <div class="left-column">
+        <div class="avatar-wrapper">
+            <img src="avatar.jpg" alt="Profile Picture">
+        </div>
+        <section class="contact">
+            <h2>📞 Liên Hệ</h2>
+            <div class="text-sm space-y-2 mt-3">
+                <p class="flex items-center"><span class="mr-2 text-xl">📍</span> Quang Trung, TPHCM</p>
+                <p class="flex items-center"><span class="mr-2 text-xl">☎️</span> 0976 263 370</p>
+                <p class="flex items-center"><span class="mr-2 text-xl">✉️</span> ntkt06072007@gmail.com</p>
+                <p class="flex items-center"><span class="mr-2 text-xl">💻</span> 5101104097@student.hcmue.edu.vn</p>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>🛠 Kỹ Năng</h2>
+            <div class="space-y-3 mt-3">
+                <div class="skill-item">
+                    <p class="text-sm mb-1">HTML, CSS, Tailwind</p>
+                    <div class="skill-bar-container">
+                        <div class="skill-level" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <p class="text-sm mb-1">JavaScript & ReactJS</p>
+                    <div class="skill-bar-container">
+                        <div class="skill-level" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <p class="text-sm mb-1">Python & SQL cơ bản</p>
+                    <div class="skill-bar-container">
+                        <div class="skill-level" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <p class="text-sm mb-1">Git & GitHub</p>
+                    <div class="skill-bar-container">
+                        <div class="skill-level" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reference">
+            <h2>🤝 Người Tham Khảo</h2>
+            <p class="text-sm mt-3">Thầy hướng dẫn và các bạn cùng lớp có thể xác nhận khả năng lập trình, dự án và tinh thần học hỏi của tôi.</p>
+        </section>
+    </div>
+
+    <!-- Cột phải -->
+    <div class="right-column">
+        <header class="mb-8">
+            <h1 class="text-4xl font-extrabold">NGUYỄN TRẦN KHANG THỊNH</h1>
+            <h3 class="text-lg mt-1 font-light">Sinh viên CNTT - HCMUE mới ra trường</h3>
+        </header>
+
+        <section class="about mb-8">
+            <div class="section-title">👤 Giới Thiệu</div>
+            <p class="text-sm text-gray-700 leading-relaxed">
+                Tôi là sinh viên Công nghệ Thông tin, tốt nghiệp năm 2025 tại Đại học Sư phạm TP. HCM (HCMUE). 
+                Đam mê lập trình web, phát triển ứng dụng và học hỏi các công nghệ mới. 
+                Tôi mong muốn được tham gia vào môi trường làm việc năng động, nơi có thể áp dụng kiến thức và kỹ năng để phát triển dự án thực tế.
+            </p>
+        </section>
+
+        <section class="experience mb-8">
+            <div class="section-title">💼 Kinh Nghiệm</div>
+            <div class="item mb-6 border-l-4 pl-4">
+                <p class="text-base font-semibold">Thực tập Frontend Developer</p>
+                <p class="text-sm text-gray-700 leading-relaxed">
+                    Thực tập tại Công ty ABC, tham gia phát triển giao diện web bằng HTML, CSS, JavaScript và ReactJS.
+                </p>
+            </div>
+            <div class="item mb-6 border-l-4 pl-4">
+                <p class="text-base font-semibold">Dự án học tập</p>
+                <p class="text-sm text-gray-700 leading-relaxed">
+                    Xây dựng website quản lý bài tập, ứng dụng quản lý sinh viên và trang portfolio cá nhân.
+                </p>
+            </div>
+        </section>
+
+        <section class="education">
+            <div class="section-title">🎓 Học Vấn</div>
+            <div class="item mb-4">
+                <p class="text-base font-semibold">Cử nhân Công nghệ Thông tin - Đại học Sư phạm TP. HCM (HCMUE)</p>
+                <p class="text-sm text-gray-600">2021 - 2025</p>
+            </div>
+            <div class="item">
+                <p class="text-base font-semibold">Khóa học trực tuyến: ReactJS & NodeJS</p>
+                <p class="text-sm text-gray-600">2024 - 2025</p>
+            </div>
+        </section>
+    </div>
+
+</div>
+
+</body>
+</html>
